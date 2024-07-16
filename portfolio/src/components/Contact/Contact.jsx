@@ -15,7 +15,7 @@ export default function Contact() {
 
                             <div className="flex items-center mt-8 text-gray-600">
                                 <svg
-                                    fillRule="none"
+                                    fill="none"
                                     stroke="currentColor"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
@@ -43,7 +43,7 @@ export default function Contact() {
 
                             <div className="flex items-center mt-4 text-gray-600">
                                 <svg
-                                    fillRule="none"
+                                    fill="none"
                                     stroke="currentColor"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
@@ -65,7 +65,7 @@ export default function Contact() {
 
                             <div className="flex items-center mt-2 text-gray-600">
                                 <svg
-                                    fillRule="none"
+                                    fill="none"
                                     stroke="currentColor"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"

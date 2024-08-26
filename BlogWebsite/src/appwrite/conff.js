@@ -1,5 +1,8 @@
-import conf from "../conf/config";
+//import conf from "../conf/config";
+import conf from "../conf/conf";
 import{Client,ID,Databases,Storage,Query}from "appwrite";
+const appwriteUrl = conf.appwriteUrl;
+const appwriteProjectId = conf.appwriteProjectId;
 export class Service{
     client=new Client();
     databases;
@@ -23,7 +26,7 @@ export class Service{
         }
 
     }
-    async updatePost(slug,title,content,featuredImage,status,userId,status){
+    async updatePost(slug,title,content,featuredImage,status,userId){
         try{
             return await this.databases.updateDocument(conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
@@ -122,4 +125,4 @@ export class Service{
     }
 }
 const service=new Service()
-export default Service
+export default service

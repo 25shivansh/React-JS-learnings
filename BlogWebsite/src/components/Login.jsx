@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Link , useNavigate}from 'react-router-dom'
 import {login as authLogin}from '../store/authSlice'
 import {Button,Input,Logo}from "./index"
@@ -17,8 +17,7 @@ function Login() {
         try{
             const session=await authService.login(data)
             if(session){
-                const userData=await authService
-                getCurrentUser()
+                const userData=await authService.getCurrentUser()
                 if(userData)dispatch(authLogin(userData));
                 navigate("/")
 
@@ -38,12 +37,12 @@ function Login() {
       <h2 className='text-center text-2xl font-bold leading-tight '>Sign in to your account</h2>
       <p className='mt-2 text-center text-base text-black/60 '>
       Don&apos;t have any acoount ?&nbsp;
-      <link 
+      <Link 
       to='/signup'
       className='font-medium text-primary transition-all duratrion-200 hover:underline'
       >
         Sign Up
-      </link>
+      </Link>
       
       </p>
       {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
